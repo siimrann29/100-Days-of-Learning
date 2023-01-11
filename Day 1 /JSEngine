@@ -1,0 +1,60 @@
+JS Engine is a program that executes JS code
+Most Famous is Google V8
+Every browser has its own JS Engine
+
+Components:
+
+1. Call Stack- This contains execution context that executes the JS code.
+2. Heap- Unstructured memory pool that stores all the obj that our app needs.
+
+How code is converted to Machine Code?
+
+Its a mixture of interpretation and compilation which is called "Just in Time Compilation"
+
+JIT Compilation- Entire code is converted to machine code at once, then executed immediately.
+
+Steps in JS-
+
+Parsing (Reading) -> Compilation (Machine Code) -> Execution (happens in Call Stack) -> Optimization -> Compilation
+
+Callback Queue- Contains all the events or callbeck function such as onClick
+
+Event Loop- When the call stack is empty it takes the callback functions from the callback queue and puts it in the call stack for execution
+
+Execution Context- Env in which a piece of JS is executed and all the necessary info is stored.
+
+Excatly one global execution context is created.
+One excution context per function is created.
+
+All Execution contexts make up the call stack.
+
+Execution Context Components:
+
+1. Variable Env
+2. Scope Chain
+3. this keyword
+
+Global Scope: -Outside of any func or block
+-Variables in this scope are accessible everywhere
+
+Function Scope: -Variables are accessible only inside the function
+-Also called local scope
+
+Block Scope: -Variables are accessible only inside the block
+-only Applies to let and const variable
+-Functions are also block scoped in strict mode
+
+What is the Temporal Dead Zone?
+
+Unlike var, which can be accessed before it is declared, variables declared with let and constants declared using const cannot be accessed before their declaration.
+
+console.log(foo); // undefined
+var foo = 123;
+
+console.log(foo); // Error
+let foo = 123;
+
+but they are hoisted!
+
+This Keyword
+Special varibale that is created for every Execution Context and it takes the value of the owner of the function in which the this keyword is used.
