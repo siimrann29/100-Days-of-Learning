@@ -23,8 +23,10 @@ Event Loop- When the call stack is empty it takes the callback functions from th
 
 Execution Context- Env in which a piece of JS is executed and all the necessary info is stored.
 
-Excatly one global execution context is created.
-One excution context per function is created.
+IMPORTANT:
+
+1. Excatly one global execution context is created.
+2. One excution context per function is created.
 
 All Execution contexts make up the call stack.
 
@@ -58,3 +60,32 @@ but they are hoisted!
 
 This Keyword
 Special varibale that is created for every Execution Context and it takes the value of the owner of the function in which the this keyword is used.
+
+"This" is not static. It depends on how the function is called, and its value is only assigned when the function is actually called.
+In a Method:
+this = Obj that is calling the method
+
+In an arrow function:
+this = this of the surrounding function (lexical this)
+
+In event listener:
+this = DOM element that the handler is attached to
+
+IMPORTANT:
+this does not point to the function or variable env.
+
+Primitive data types:
+-Number
+-String
+-Boolean
+-Undefined
+-Null
+-Symbol
+-BigInt
+
+                      ___
+
+Reference Types(Objects) |
+-Obj literals |
+-Arrays |---> Stored in Heap
+-Functions etc \_\_|
