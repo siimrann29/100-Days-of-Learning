@@ -1,0 +1,7 @@
+Arrays Basics
+
+Push = Adds the element to yhe end of the Array
+unshift = Adds the element to the start of the Array
+pop = Removes the last element of the Array
+Shift =  Removes the first element from the array and returns the removed element
+includes = tells if the elemnt is present in the array or not, returns boolean

@@ -1,0 +1,35 @@
+First Class Functions
+
+-> Functions are trated as first class citizens
+-> Functions are simply values
+->Functions are just another type of object
+
+-> Store functions in variable or properties
+->Pass functions as arguments or other Functions
+->Return Functions from Functions
+->Call methods on functions
+
+First class functions is just a concept that JS has!
+
+Higher order functions 
+-> A function that receives another function as arg., that returns a new function, or both
+->This is only possible because of first order funfctions.
+
+
+If there are 2 or more objects in a code, then how the "this" keyword can be used?
+
+There are three methods
+call, bind and apply
+
+
+Call Method-
+const variableName = functionName.call(objName,List of functionParameters);
+
+apply Method-
+functionName.apply(objName,Array of functionParameters);
+
+Bind Method- (Important)
+
+const NewfunctionName = functionName.bind(ObjName);
+NewfunctionName call(list of parameters);
+

@@ -1,0 +1,9 @@
+Objects Basics
+
+->Objects take key value pairs
+-> We can retrieve the property of the object using the dot notation or bracket notation
+
+Ex.
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
